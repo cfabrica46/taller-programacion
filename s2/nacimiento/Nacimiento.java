@@ -10,6 +10,8 @@ public class Nacimiento {
 		System.out.print("> ");
 		edad = input.nextInt();
 
+		input.close();
+
 		nacimiento = 2020 - edad;
 
 		System.out.println("Su año de nacimiento es: " + nacimiento);

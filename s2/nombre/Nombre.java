@@ -10,6 +10,8 @@ public class Nombre {
 		System.out.print("> ");
 		name = input.next();
 
+		input.close();
+
 		System.out.println("Tu nombre es: " + name);
 	}
 }
