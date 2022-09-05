@@ -4,20 +4,31 @@ public class MarcaPrecio {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		double x, y;
+		String marca;
+		double precio;
 
-		System.out.println("Ingrese el primer numero:");
+		System.out.println("Ingrese la marca del carro:");
 		System.out.print("> ");
-		x = input.nextDouble();
+		marca = input.next();
 
-		System.out.println("Ingrese el segundo numero:");
+		System.out.println("Ingrese el precio del carro:");
 		System.out.print("> ");
-		y = input.nextDouble();
+		precio = input.nextDouble();
 
-		if (x > y) {
-			System.out.println("El numero mayor es el primero: " + x);
-		} else {
-			System.out.println("El numero mayor es el segundo: " + y);
-		}
+		input.close();
+
+		System.out.println(marca);
+
+		precio = (marca.toLowerCase().equals("toyota") ? precio * 94 / 100 : precio * 97 / 100);
+
+		/*
+		 * if (marca.toLowerCase().equals("toyota")) {
+		 * precio = precio * 94 / 100;
+		 * } else {
+		 * precio = precio * 97 / 100;
+		 * }
+		 */
+
+		System.out.println("El precio es: " + precio + " soles");
 	}
 }
