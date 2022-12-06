@@ -33,4 +33,6 @@ func main() {
 	}
 
 	fmt.Println("\nUsted escogio:", myOptions[optionSelected].Name)
+
+	myOptions[optionSelected].Job()
 }

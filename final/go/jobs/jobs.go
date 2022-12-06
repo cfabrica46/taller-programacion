@@ -1,9 +1,14 @@
 package jobs
 
-import "fmt"
+import (
+	"fmt"
+
+	"go/doctors"
+)
 
 func ViewDoctors() {
 	fmt.Println("View Doctors")
+	doctors.NewDoctor()
 }
 
 func ScheduleAppointment() {
