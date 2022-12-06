@@ -32,7 +32,7 @@ func main() {
 		}
 	}
 
-	fmt.Println("\nUsted escogio:", myOptions[optionSelected].Name)
+	fmt.Printf("\nUsted escogio: %s \n\n", myOptions[optionSelected].Name)
 
 	myOptions[optionSelected].Job()
 }
