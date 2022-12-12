@@ -27,13 +27,21 @@ func init() {
 	}
 }
 
-func GetAppointments() (appointments []Appointment, err error) {
+func GetAppointments() (appoints map[string]Appointment, err error) {
+	var appointments []Appointment
+
 	err = json.Unmarshal(dataAppointments, &appointments)
 	if err != nil {
 		return nil, err
 	}
 
-	return appointments, nil
+	appoints = make(map[string]Appointment)
+
+	for _, appoint := range appointments {
+		appoints[appoint.ID] = appoint
+	}
+
+	return appoints, nil
 }
 
 func GetNumberFreeAppointmentsByDoctorDNI(dni string) (numberAppointments int, err error) {
@@ -49,4 +57,21 @@ func GetNumberFreeAppointmentsByDoctorDNI(dni string) (numberAppointments int, e
 	}
 
 	return numberAppointments, nil
+}
+
+func UpdateData(appoints map[string]Appointment) {
+	var appointments []Appointment
+
+	for i := range appoints {
+		appointments = append(appointments, appoints[i])
+	}
+
+	data, err := json.MarshalIndent(appointments, "", "    ")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if err := os.WriteFile("appointments.json", data, 0o644); err != nil {
+		log.Fatal(err)
+	}
 }

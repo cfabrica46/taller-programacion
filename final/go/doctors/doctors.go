@@ -2,6 +2,7 @@ package doctors
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 )
@@ -17,6 +18,7 @@ const (
 
 type Doctor struct {
 	DNI            string    `json:"dni"`
+	Password       string    `json:"password"`
 	Name           string    `json:"name"`
 	Age            int       `json:"age"`
 	Specialty      Specialty `json:"specialty"`
@@ -34,11 +36,44 @@ func init() {
 	}
 }
 
-func GetDoctors() (doctors []Doctor, err error) {
+func GetDoctors() (docs map[string]Doctor, err error) {
+	var doctors []Doctor
+
 	err = json.Unmarshal(dataDoctors, &doctors)
 	if err != nil {
 		return nil, err
 	}
 
-	return doctors, nil
+	docs = make(map[string]Doctor)
+
+	for _, doc := range doctors {
+		docs[doc.DNI] = doc
+	}
+
+	return docs, nil
+}
+
+func CheckCredentials(dni, password string) (acces bool) {
+	doctors, err := GetDoctors()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for i := range doctors {
+		if dni == doctors[i].DNI && password == doctors[i].Password {
+			return true
+		}
+	}
+
+	return false
+}
+
+func GetSpecialties() (specialties []Specialty) {
+	return append(specialties, dermatologist, neurologist, pediatrician, psychiatrist)
+}
+
+func ViewSpecialties(specialties []Specialty) {
+	for i := range specialties {
+		fmt.Printf("%d. %s\n", i+1, specialties[i])
+	}
 }

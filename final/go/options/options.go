@@ -3,7 +3,7 @@ package options
 import (
 	"fmt"
 
-	"go/jobs"
+	"project/jobs"
 )
 
 type Option struct {
@@ -11,7 +11,9 @@ type Option struct {
 	Name string
 }
 
-func GetOptions() Options {
+type Options []Option
+
+func GetPatientOptions() Options {
 	return Options{
 		{
 			Name: "Salir",
@@ -21,12 +23,16 @@ func GetOptions() Options {
 			Job:  jobs.ViewDoctors,
 		},
 		{
-			Name: "Agendar una cita",
-			Job:  jobs.ScheduleAppointment,
+			Name: "Ver citas disponibles",
+			Job:  jobs.ViewAvailableAppointments,
 		},
 		{
-			Name: "Reprogramar una cita",
-			Job:  jobs.RescheduleAppointment,
+			Name: "Ver citas disponibles por especialidad",
+			Job:  jobs.ViewAvailableAppointmentsBySpecialty,
+		},
+		{
+			Name: "Agendar una cita",
+			Job:  jobs.ScheduleAppointment,
 		},
 		{
 			Name: "Cancelar una cita",
@@ -35,7 +41,28 @@ func GetOptions() Options {
 	}
 }
 
-type Options []Option
+func GetDoctorOptions() Options {
+	return Options{
+		{
+			Name: "Salir",
+		},
+		{
+			Name: "Añadir una cita",
+		},
+		{
+			Name: "Ver mis citas",
+		},
+		{
+			Name: "Ver citas ocupadas",
+		},
+		{
+			Name: "Reagendar una cita",
+		},
+		{
+			Name: "Cancelar una cita",
+		},
+	}
+}
 
 func (o Options) ViewOptions() {
 	for i := range o {
