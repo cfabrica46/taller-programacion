@@ -60,9 +60,11 @@ func GetDoctorOptions() Options {
 		},
 		{
 			Name: "Reagendar una cita",
+			Job:  jobs.UpdateAppointment,
 		},
 		{
 			Name: "Eliminar una cita",
+			Job:  jobs.RemoveAppointment,
 		},
 	}
 }

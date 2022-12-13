@@ -1,15 +1,5 @@
 [
     {
-        "dni": "69434239",
-        "password": "abcd",
-        "name": "Lisette",
-        "age": 27,
-        "specialty": "Pediatra",
-        "appointmentsID": [
-            "e78f6bce-750d-11ed-a1eb-0242ac120002"
-        ]
-    },
-    {
         "dni": "62535029",
         "password": "abcd",
         "name": "Luis",
@@ -30,26 +20,6 @@
         ]
     },
     {
-        "dni": "16539877",
-        "password": "abcd",
-        "name": "Maria",
-        "age": 54,
-        "specialty": "Psiquiatra",
-        "appointmentsID": [
-            "e78f6fe8-750d-11ed-a1eb-0242ac120002"
-        ]
-    },
-    {
-        "dni": "51410145",
-        "password": "abcd",
-        "name": "Fernando",
-        "age": 30,
-        "specialty": "Dermatologo",
-        "appointmentsID": [
-            "e78f710a-750d-11ed-a1eb-0242ac120002"
-        ]
-    },
-    {
         "dni": "95073347",
         "password": "abcd",
         "name": "Aaron",
@@ -67,8 +37,37 @@
         "specialty": "Dermatologo",
         "appointmentsID": [
             "e78f678c-750d-11ed-a1eb-0242ac120002",
-            "b59f2c6c-552b-4960-8208-0f605b6d3a53",
-            "f556aae5-dcb2-4474-b0e2-04bba23a858b"
+            "b59f2c6c-552b-4960-8208-0f605b6d3a53"
+        ]
+    },
+    {
+        "dni": "69434239",
+        "password": "abcd",
+        "name": "Lisette",
+        "age": 27,
+        "specialty": "Pediatra",
+        "appointmentsID": [
+            "e78f6bce-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "16539877",
+        "password": "abcd",
+        "name": "Maria",
+        "age": 54,
+        "specialty": "Psiquiatra",
+        "appointmentsID": [
+            "e78f6fe8-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "51410145",
+        "password": "abcd",
+        "name": "Fernando",
+        "age": 30,
+        "specialty": "Dermatologo",
+        "appointmentsID": [
+            "e78f710a-750d-11ed-a1eb-0242ac120002"
         ]
     },
     {
