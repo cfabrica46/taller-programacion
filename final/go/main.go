@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"project/doctors"
+	"project/jobs"
 	"project/options"
 )
 
@@ -45,6 +46,8 @@ func main() {
 		if !acces {
 			log.Fatal("Credenciales incorrectas")
 		}
+
+		jobs.SetDoctorDNI(dni)
 	}
 
 	if typeLogin == "D" {

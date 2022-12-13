@@ -27,8 +27,7 @@ func GetPatientOptions() Options {
 			Job:  jobs.ViewAvailableAppointments,
 		},
 		{
-			Name: "Ver citas disponibles por especialidad",
-			Job:  jobs.ViewAvailableAppointmentsBySpecialty,
+			Name: "Ver citas disponibles por especialidad", Job: jobs.ViewAvailableAppointmentsBySpecialty,
 		},
 		{
 			Name: "Agendar una cita",
@@ -47,19 +46,21 @@ func GetDoctorOptions() Options {
 			Name: "Salir",
 		},
 		{
-			Name: "Añadir una cita",
-		},
-		{
 			Name: "Ver mis citas",
+			Job:  jobs.ViewDoctorAppointments,
 		},
 		{
 			Name: "Ver citas ocupadas",
+			Job:  jobs.ViewOcupatesDoctorAppointments,
+		},
+		{
+			Name: "Añadir una cita",
 		},
 		{
 			Name: "Reagendar una cita",
 		},
 		{
-			Name: "Cancelar una cita",
+			Name: "Eliminar una cita",
 		},
 	}
 }

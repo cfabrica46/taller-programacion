@@ -3,7 +3,6 @@ package jobs
 import (
 	"fmt"
 	"log"
-
 	"project/appointments"
 	"project/doctors"
 )
