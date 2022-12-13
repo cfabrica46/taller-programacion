@@ -77,3 +77,20 @@ func ViewSpecialties(specialties []Specialty) {
 		fmt.Printf("%d. %s\n", i+1, specialties[i])
 	}
 }
+
+func UpdateData(docs map[string]Doctor) {
+	var doctors []Doctor
+
+	for i := range docs {
+		doctors = append(doctors, docs[i])
+	}
+
+	data, err := json.MarshalIndent(doctors, "", "    ")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if err := os.WriteFile("doctors.json", data, 0o644); err != nil {
+		log.Fatal(err)
+	}
+}
