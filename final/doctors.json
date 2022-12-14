@@ -1,0 +1,93 @@
+[
+    {
+        "dni": "62535029",
+        "password": "abcd",
+        "name": "Luis",
+        "age": 63,
+        "specialty": "Dermatologo",
+        "appointmentsID": [
+            "e78f6d0e-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "31062253",
+        "password": "abcd",
+        "name": "Angela",
+        "age": 36,
+        "specialty": "Pediatra",
+        "appointmentsID": [
+            "e78f6eb2-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "95073347",
+        "password": "abcd",
+        "name": "Aaron",
+        "age": 30,
+        "specialty": "Neurologo",
+        "appointmentsID": [
+            "e78f7646-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "11394085",
+        "password": "abcd",
+        "name": "Carlos",
+        "age": 30,
+        "specialty": "Dermatologo",
+        "appointmentsID": [
+            "e78f678c-750d-11ed-a1eb-0242ac120002",
+            "b59f2c6c-552b-4960-8208-0f605b6d3a53"
+        ]
+    },
+    {
+        "dni": "69434239",
+        "password": "abcd",
+        "name": "Lisette",
+        "age": 27,
+        "specialty": "Pediatra",
+        "appointmentsID": [
+            "e78f6bce-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "16539877",
+        "password": "abcd",
+        "name": "Maria",
+        "age": 54,
+        "specialty": "Psiquiatra",
+        "appointmentsID": [
+            "e78f6fe8-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "51410145",
+        "password": "abcd",
+        "name": "Fernando",
+        "age": 30,
+        "specialty": "Dermatologo",
+        "appointmentsID": [
+            "e78f710a-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "60779208",
+        "password": "abcd",
+        "name": "Cesar",
+        "age": 45,
+        "specialty": "Neurologo",
+        "appointmentsID": [
+            "e78f6a70-750d-11ed-a1eb-0242ac120002"
+        ]
+    },
+    {
+        "dni": "19732183",
+        "password": "abcd",
+        "name": "Stevan",
+        "age": 30,
+        "specialty": "Psiquiatra",
+        "appointmentsID": [
+            "e78f7506-750d-11ed-a1eb-0242ac120002"
+        ]
+    }
+]
